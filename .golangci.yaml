@@ -1,0 +1,24 @@
+# See https://golangci-lint.run/usage/configuration/ for reference.
+run:
+  concurrency: 16
+  skip-dirs:
+    - bin
+
+output:
+  sort-results: true
+
+linters:
+  disable-all: true
+  enable:
+    - revive
+    - gosec
+    - govet
+    - staticcheck
+
+linters-settings:
+  gosec:
+    config:
+      G101:
+        # We intentionally remove the 'cred' regex, to avoid false positives
+        pattern: "(/i)passwd|pass|password|pwd|secret|token|pw|apiKey|bearer"
+

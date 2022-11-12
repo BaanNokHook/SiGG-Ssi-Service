@@ -1,0 +1,23 @@
+{
+  "id":"id123",
+  "format":{
+    "jwt":{
+      "alg":[
+        "EdDSA"
+      ]
+    }
+  },
+  "manifest_id":"<MANIFESTID>",
+  "presentation_submission":{
+    "id":"psid",
+    "definition_id":"<DEFINITIONID>",
+    "descriptor_map":[
+      {
+        "id":"kyc1",
+        "format":"jwt_vc",
+        "path": "$.verifiableCredentials[0]"
+      }
+    ]
+  },
+  "spec_version":"https://identity.foundation/credential-manifest/spec/v1.0.0/"
+}

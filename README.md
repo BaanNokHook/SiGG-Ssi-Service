@@ -1,2 +1,2 @@
 # SiGG-Ssi-Service
-SiGG-Ssi-Service
+SiGG-ssi-service

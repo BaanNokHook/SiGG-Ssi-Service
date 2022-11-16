@@ -80,7 +80,7 @@ func Decoder(r *http.Request, val interface{}) error {
 
 		var fieldErrors []FieldError
 		for _, vError := range vErrors {
-			fieldError := fieldError{
+			fieldError := FieldError{
 				Field: vError.Field(),
 				Error: vError.Translate(lang),
 			}
